@@ -1,0 +1,683 @@
+:root {
+    --oBlack: #1D1D1B;
+    --white: #FFFFFF;
+    --dBlue: #00246D;
+    --mdBlue: #0D3F8D;
+    --mBlue: #1B5AAE;
+    --orange: #F1AB60;
+    --dOrange: #F18C2E;
+    --header-height: 8vh;
+  }
+  
+body, main {
+    font-family: 'Montserrat';font-size: 22px;
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    font-size: 15px;
+    transition: background-color 1s ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black);
+    padding: 30px 5vw;
+    height: var(--header-height);
+  }
+  
+.logo {
+    width: max(min(4vw,60px), 30px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+.logo img {
+    width: 100%;
+    object-fit: contain; 
+}
+  
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+nav li {
+    margin: 0px 1.5vw;
+  }
+  
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    transition: color 0.3s;
+  }
+  
+nav a:hover {
+    color: var(--orange);
+  }
+  
+.active a {
+    color: var(--orange);
+  }
+
+.button {
+    display: flex;
+    align-items: center;
+}
+.signup-button {
+    text-decoration: none;
+    color: var(--white);
+    height: 4.5ch;
+    padding: 0 3ch;
+    background-color: var(--dOrange);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-button:hover {
+    background-color: var(--orange);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+    text-align: center;
+    background-image: url('/content/line.png'); /* Replace with the path to your SVG background image */
+    background-size: 100% 35%;
+    background-repeat: no-repeat;
+    background-position-y: 70%;
+}
+
+h1 {
+    font-size: min(2.5vw, 30px);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: min(2vw, 25px);
+    font-weight: 700;
+    margin: 50px 0 0 0;
+    padding: 0;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 45vh;
+}
+
+.feature {
+    text-align: center;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.feature img {
+    margin-right: 1ch;
+    width: 1.5ch;
+    object-fit: fit;
+}
+
+.feature p {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    text-align: center;
+}
+
+.logo-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px 20vh 20px;
+    width: 50vw;
+}
+
+.logo-list img {
+    width: 10vw;
+    object-fit: contain;
+}
+
+#orange {
+    color: var(--orange);
+}
+
+.about-CLIP, .about-us {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10vw;
+    margin: 0;
+    position: relative;
+    overflow: visible;  
+}
+
+.render-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -100vh;
+    width: 100%;
+    height: 200vh;
+    z-index: -1;
+    background-image: url('/content/renderTall.png');
+    background-size: auto 200vh;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-position-x: 100%;
+    overflow: visible;
+    transition: opacity 0.05s ease-in-out;
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) calc(100% - 120px), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1 calc(100% - 120px), rgba(0, 0, 0, 0)));
+
+}
+
+.CLIP-facts, .team {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 13px;
+}
+
+.about-header {
+    padding: 50px 100px 50px 0;
+}
+
+.left-column,
+.center-column {
+    width: calc(35% - 100px); /* Adjusts width of img/txt */
+    text-align: center;
+    height: 40vh;
+}
+
+.right-column {
+    width: 30%; /* larger pushes L and C columns further left */
+}
+
+.left-column img,
+.center-column img,
+.right-column img {
+    width: 80%;
+    height: 40vh;
+    object-fit: contain;
+}
+
+.right-column img {
+    width: 100%;
+    height: 100vh;
+    object-fit: fill;
+    align-items: left;
+}
+
+.about-column {
+    margin: 20px 5vw 0 5vw;
+    text-align: center;
+    align-items: center;
+
+    p {
+        width: 100%;
+    }
+
+}
+
+.about-photo {
+    width: min(15vw,500px); /* Adjust the width of the circular photo */
+    height: min(15vw,500px); /* Adjust the height of the circular photo */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px; /* Center the circular photo and add margin below it */
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--dBlue);
+    align-content: center;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-left {
+    margin-left: auto; /* Push the right column to the far right */
+    width: 30ch;
+}
+
+.footer-row {
+    margin-bottom: 10px;
+}
+
+.input {
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    display: block;
+    font-family: 'Muli', sans-serif;
+    background-color: rgba(255,255,255, 0.3);
+    padding: 1ch 2ch;
+    margin-bottom: 1ch;
+    width: 30ch;
+    color: var(--white);
+}
+
+
+::placeholder {
+    color: var(--white);
+}
+
+.form-control {
+    position: relative;
+    width: 35ch;
+    font-size: 13px;
+}
+.sub {
+    padding: 1ch 2ch;
+    background-color: var(--dOrange);
+    color: #fff; 
+    cursor: pointer;
+    border: 0;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+    margin-top: 1ch;
+
+}
+
+.sub:hover {
+    background-color: var(--orange);
+}
+  
+.input:focus, .btn:focus {
+    outline: 0;
+  }
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: var(--dBlue);
+    padding-top: 100px;
+}
+
+.footer-columns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 80vw;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    width: 80ch;
+}
+
+.footer-right {
+    width: 30ch;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-row {
+    margin-bottom: 1ch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+/* Style links with images */
+footer a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white);
+    padding-right: 3ch;
+}
+
+footer a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.sBr {
+    height:20px;
+}
+
+.footer-logo {
+    width: max(100px, min(15vw,500px)); /* Adjust the width of the circular photo */
+    object-fit: contain;
+}
+
+
+  #cookiePopup {
+    background-color: #ffffff;
+    position: fixed;
+    font-size: 14px;
+    width: 25ch;
+    box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+    line-height: 1.8em;
+    padding: 2em 1.4em;
+    border-radius: 6px;
+    color: var(--oBlack);
+    transition: all 0.3s ease-in-out;
+  }
+  #cookiePopup img {
+    display: block;
+    width: 50px;
+    transform: translateZ(0);
+    position: relative;
+    margin: auto;
+  }
+  #cookiePopup p {
+    text-align: center;
+    margin: 1.4em 0;
+  }
+  #cookiePopup button {
+    background-color: var(--mBlue);
+    border: none;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 1.5ch 2ch;
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 5px;
+  }
+  #cookiePopup a {
+    color: var(--oBlack);
+  }
+  .hide {
+    visibility: hidden;
+    bottom: 2em;
+    right: -20em;
+  }
+  .show {
+    visibility: visible;
+    bottom: 2em;
+    right: 2em;
+  }
+
+/* panel styles */
+.panel {
+    /* min height incase content is higher than window height */
+    min-height: 100vh;
+}
+  
+.color-d-blue {
+    background-color:var(--dBlue);
+  }
+.color-m-blue {
+    background-color:var(--mBlue);
+  }
+
+  .color-md-blue {
+    background-color:var(--mdBlue);
+  }
+
+  /* Mobile Styles */
+@media only screen and (max-width: 800px) {
+    body, main {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 20px 5vw;
+    }
+
+    .logo {
+        width: max(min(8vw, 80px), 40px);
+    }
+
+    .nav li {
+        margin: 0px 1vw;
+    }
+
+    .signup-button {
+        height: 3.5ch;
+        padding: 0 2ch;
+    }
+
+    .hero, .content, .about-CLIP, .about-us, .footer-section {
+        height: auto;
+        padding: 10vh 10vw;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .hero {
+        background-position-y: 90%;
+    }
+
+
+
+    h1 {
+        font-size:30px;
+        padding-bottom: 20px;
+        padding-top: 15vh;
+    }
+
+    h2 {
+        font-size:25px;
+        margin: 30px 0;
+        padding-bottom: 20px;
+
+    }
+
+    .feature-list {
+        padding-bottom: 30vh;
+    }
+
+    .feature img {
+        margin-right: 0.5ch;
+        width: 1ch;
+    }
+
+    .logo-list {
+        padding: 0;
+        margin-left: 0;
+    }
+
+    .logo-list img {
+        width: 15vw;
+        padding: 10px;
+    }
+
+    .CLIP-facts,
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-column,
+    .center-column,
+    .right-column,
+    .about-column {
+        width: 70%; /* Full width for mobile */
+        text-align: center;
+        margin-bottom: 20px; /* Add some spacing between items */
+        height: auto;
+    }
+
+    .about-photo {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .footer-left {
+        width: 80vw;
+    }
+
+    .footer-right {
+        width: 50vw;
+    }
+
+    .footer-row {
+        margin-bottom: 10px;
+        flex-direction: column;
+    }
+    .render-background {
+        background-image: none;
+    }
+    .signup-button {
+        height: 0;
+        width: 0;
+        font-size: 0;
+    }
+    
+    nav li {
+        margin: 0px 3vw;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 801px) and (max-width: 1024px) {
+    body, main {
+        font-size: 20px;
+    }
+
+    header {
+        padding: 25px 5vw;
+    }
+
+    .logo {
+        width: max(min(6vw, 60px), 30px);
+    }
+
+    .nav li {
+        margin: 0px 1.5vw;
+    }
+
+    .signup-button {
+        height: 4ch;
+        padding: 0 3ch;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
+        margin: 50px 0 0 0;
+
+    }
+
+    .feature-list {
+        padding-bottom: 40vh;
+    }
+
+    .feature img {
+        margin-right: 1ch;
+        width: 1.5ch;
+    }
+
+    .logo-list img {
+        width: 10vw;
+    }
+
+    .about-CLIP, .about-us {
+        padding: 0 10vw;
+    }
+
+    .left-column,
+    .center-column {
+        width: calc(35% - 50px);
+    }
+
+    .right-column {
+        width: 25%;
+    }
+
+    .left-column img,
+    .center-column img,
+    .right-column img {
+        width: 70%;
+        height: auto;
+    }
+
+    .about-photo {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .footer-left {
+        width: 50vw;
+    }
+
+    .footer-right {
+        width: 50vw;
+    }
+    .render-background {
+        height: 100vh;
+        -webkit-mask-image: none;
+        mask-image: none;
+
+    }
+    h3 {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    
+}
