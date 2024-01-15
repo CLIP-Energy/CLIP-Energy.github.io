@@ -60,10 +60,6 @@ nav a {
 nav a:hover {
     color: var(--orange);
   }
-  
-.active a {
-    color: var(--orange);
-  }
 
 .button {
     display: flex;
@@ -607,6 +603,11 @@ h3 {
         font-size: 18px;
         padding-top: 10px;
     }
+
+    nav a:hover {
+        color: var(--white);
+      }
+    
 }
 
 /* Tablet Styles */
@@ -697,5 +698,9 @@ h3 {
         font-size: 20px;
         padding-top: 20px;
     }
+      
+    nav a:hover {
+        color: var(--white);
+      }
     
 }
