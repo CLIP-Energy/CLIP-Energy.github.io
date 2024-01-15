@@ -496,20 +496,31 @@ h3 {
         padding: 0 2ch;
     }
 
-    .hero, .content, .about-CLIP, .about-us, .footer-section {
+    .content, .about-CLIP, .about-us, .footer-section {
         height: auto;
         padding: 8vh 10vw;
         width: auto;
     }
 
     .hero {
-        background-position-y: 90%;
+        background-position-y: 70%;
+        height: auto;
+        padding: 10vh 0;
+        width: auto;
+        align-content: center;
+        text-align: center;
+        flex-wrap: wrap;
     }
 
     h1 {
         position: relative;
         font-size:30px;
-        padding: 10vh 10vw 20px 10vw;
+    }
+
+    .hero-text {
+        position: relative;
+        padding: 0 10vw;
+        width: 80vw;
     }
 
     h2 {
@@ -519,8 +530,11 @@ h3 {
     }
 
     .feature-list {
-        padding-bottom: 30vh;
-        font-size: 18px;
+        font-size: 14px;
+    }
+
+    .feature {
+        margin: 0 10px;
     }
 
     .feature img {
@@ -598,6 +612,7 @@ h3 {
 
     .input, .sub {
         font-size: 18px;
+        width: 20ch;
     }
 
     .footer-row a {
